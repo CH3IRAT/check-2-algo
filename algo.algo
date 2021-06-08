@@ -1,0 +1,31 @@
+PROCEDURE dot_product();
+VAR : 
+ps : float ;
+v1: table_of_float[];
+v2: table_of_float[];
+i,N: integer ;
+x,s:integer=0;
+beign 
+for i from 1 to N do 
+x:=x+v1[i];
+s:=s+v2[i];
+ps:=x*s;
+end for ;
+end for ; 
+end .
+
+
+ALGORITHM  orthogonal (VAR v1: array_of_float ;VAR v2: array_of_float ; );
+var : 
+esp:float ;
+i: integer;
+ok:boolean;
+beign
+while v1[i] MOD 2 = 0 and v2[i] MOD 2 = 0 do 
+eps:=dot_product();
+if eps<>0 then
+ok := false;
+else
+ok:=true; 
+end while;
+end.
